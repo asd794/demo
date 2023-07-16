@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>變更密碼</title>
+    <link rel="stylesheet" type="text/css" href="./public/t1.css">
+</head>
+<body>
+    <div class="login-box">
+        <h2>變更密碼</h2>
+        <form action="/changed" method="post">
+          <div class="user-box">
+            <input type="password" name="old_password">
+            <label>舊密碼</label>
+          </div>
+          <div class="user-box">
+            <input type="password" name="new_password">
+            <label>新密碼</label>
+          </div>
+          <div style="width: 50%;float: left;text-align: center;">
+            <button>立即變更</button>
+          </div>
+          <div style="width: 50%;float: left;text-align: center;">
+            <a href="/member">返回</a>
+          </div>
+        </form>
+        
+    </div>
+</body>
+</html>
