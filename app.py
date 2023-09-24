@@ -6,6 +6,8 @@ from flask import *
 from flask_bcrypt import Bcrypt #匯入flask-bcrypt 套件
 bcrypt=Bcrypt() # 建立Bcrypt實體並指定給變數bcrypt
 
+# doec
+
 app=Flask(
     __name__,
     static_folder="public",
