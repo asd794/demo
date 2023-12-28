@@ -218,6 +218,165 @@ html {
     animation: btn-anim1 1s linear infinite;
   }
   
+  .kkbox-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 400px;
+    padding: 40px 40px 40px 40px;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+
+  }
+  .kkbox-box a {
+    position: relative;
+    display: inline-block;
+    padding: 1px 20px;
+    color: white;
+    background-color: transparent;
+    border-style: none;
+    font-size: 14px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: .5s;
+    /* margin-top: 20px; */
+    letter-spacing: 4px;
+  }
+  .kkbox-box a:hover {  
+    background: #ff0000;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px black,
+                0 0 25px #ff0000,
+                0 0 50px #ff0000,
+                0 0 100px #ff0000;
+  }
+  .kkbox-box h2 {
+    /* margin: 0 0 30px; */
+    padding: 0;
+    color: #fff;
+    text-align: center;
+  }
+  .kkbox-box span {
+    position: relative;
+    display: inline-block;
+    /* padding: 10px 20px; */
+    color: white;
+    background-color: transparent;
+    border-style: none;
+    font-size: 12px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: .5s;
+    /* margin-top: 40px; */
+  }
+  .kkbox-box form button {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #03e9f4;
+    background-color: transparent;
+    border-style: none;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px;
+  }
+  .kkbox-box form button:hover {
+    background: #03e9f4;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 100px #03e9f4;
+  }
+  .kkbox-box-songs {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 700px;
+    padding: 40px 40px 40px 40px;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+  }
+  .kkbox-box-songs a {
+    position: relative;
+    display: inline-block;
+    padding: 1px 20px;
+    color: white;
+    background-color: transparent;
+    border-style: none;
+    font-size: 14px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: .5s;
+    /* margin-top: 20px; */
+    letter-spacing: 4px;
+  }
+  .kkbox-box-songs a:hover {  
+    background: #ff0000;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px black,
+                0 0 25px #ff0000,
+                0 0 50px #ff0000,
+                0 0 100px #ff0000;
+  }
+  .kkbox-box-songs h2 {
+    /* margin: 0 0 30px; */
+    padding: 0;
+    color: #fff;
+    text-align: center;
+  }
+  .kkbox-box-songs span {
+    position: relative;
+    display: inline-block;
+    /* padding: 10px 20px; */
+    color: white;
+    background-color: transparent;
+    border-style: none;
+    font-size: 12px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: .5s;
+    /* margin-top: 40px; */
+  }
+  .kkbox-box-songs form button {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #03e9f4;
+    background-color: transparent;
+    border-style: none;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px;
+  }
+  .kkbox-box-songs form button:hover {
+    background: #03e9f4;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 100px #03e9f4;
+  }
+
   @keyframes btn-anim1 {
     0% {
       left: -100%;

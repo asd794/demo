@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>會員</title>
+  <link rel="stylesheet" type="text/css" href="./public/t1.css">
+</head>
+<body>
+  <!-- <div style="position: absolute;top: 40%;left: 50%;width: width: 400px;">
+    <span>123</span>
+  </div> -->
+  <div class="kkbox-box-songs">
+    <h2>{{chart}} TOP20</h2>
+    {% for i in range(20) %}
+    <span>NO.{{i+1}} {{songs[i]}}</span>
+    <br>
+    {% endfor %}
+    <div style="width: 100%;float: left;text-align: center;">
+      <form action="/kkbox">
+        <button>返回查詢</button>
+      </form>
+      <form action="/signout">
+        <button>登出</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>會員</title>
+  <link rel="stylesheet" type="text/css" href="./public/t1.css">
+</head>
+<body>
+  <div class="kkbox-box">
+    <h2>KKBOX排行榜</h2>
+    <br>
+     <form action="/charts" method="get" style="text-align: center;">
+        <select name="chart" multiple size="8" style="width: 90%;background-color: rgb(224, 222, 222);text-align:center;">
+            {% for i in charts %}
+              <option>{{charts[i][1]}}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <button>查詢</button>
+      </form>
+    <div style="width: 100%;float: left;text-align: center;">
+      <form action="/signout">
+        <button>登出</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,5 +1,6 @@
 from pymongo.mongo_client import MongoClient
 uri = "mongodb+srv://asd123753951:q9BsyWYDLiZXjCYh@cluster0.azvuikv.mongodb.net/?retryWrites=true&w=majority"
+import kkobxapi
 # Create a new client and connect to the server
 client = MongoClient(uri)
 from flask import *
@@ -13,6 +14,7 @@ app=Flask(
     static_folder="public",
     # static_url_path="/"
 )
+# app.config['JSON_AS_ASCII'] = False
 app.secret_key="secret key for flask test"
 
 # 登入首頁
@@ -139,10 +141,33 @@ def error_change():
     message=request.args.get("msg","發生錯誤請聯繫客服")
     return render_template("error_change.html",message=message)
 
+# 變更密碼完成頁面 /chango_complete
 @app.route("/change_complete")
 def error_complete():
     return render_template("change_complete.html")
 
+# KKBOX頁面 /kkbox
+@app.route("/kkbox")
+def kkbox():
+    return render_template("kkbox.html",account=session['account'],email=session['email'],charts=kkobxapi.charts())
+
+# KKBOX查詢榜單後歌曲頁面 /charts
+@app.route("/charts" ,methods=["get"])
+def search_a_chart():
+    chart_request=request.args.get("chart") # 接收前端get
+    if chart_request==None:
+        return render_template("kkbox.html",account=session['account'],email=session['email'],charts=kkobxapi.charts())
+    ch=kkobxapi.charts()
+    for i in ch:
+        if chart_request in ch[i][1]:
+            result_search_id=ch[i][0]
+            break
+    origin_result=kkobxapi.a_chart_playlist(result_search_id)
+    array=[]
+    for i in range(20):
+        array.append(origin_result[chart_request][i])
+    result_20={chart_request:array}
+    return render_template("kkbox_songs.html",chart=chart_request,songs=result_20[chart_request])
 
 if __name__=='__main__':
     app.run(host='0.0.0.0',port=80)
