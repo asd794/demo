@@ -1,4 +1,4 @@
-系統:aws:ubuntu->docker->flask
+系統:ubuntu(aws)->docker->flask
 
 domain:cloudflare(https)
 
